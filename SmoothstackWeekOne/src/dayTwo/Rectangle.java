@@ -1,4 +1,4 @@
-
+package dayTwo;
 public class Rectangle implements Shape {
 
 	int x=1;

@@ -1,3 +1,4 @@
+package dayTwo;
 
 public class Triangle implements Shape {
 	
