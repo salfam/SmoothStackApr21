@@ -11,7 +11,7 @@ import java.util.Comparator;
  *
  */
 public class StringLambdas {
-
+//runnable
 	public static void main(String[] args) {
 		String[] a = { "eh", "longword", "words", "effort", "nevermind" };
 
@@ -38,6 +38,7 @@ public class StringLambdas {
 			System.out.println(b);
 		}
 		
+		Arrays.sort(a); //resort to make sure next part works
 		System.out.println("");// gap
 		System.out.println("Sorting by e again");
 		Arrays.sort(a, (s1, s2) -> Utils.sortByE(s1, s2));

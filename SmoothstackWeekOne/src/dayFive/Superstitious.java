@@ -3,16 +3,12 @@ package dayFive;
 import java.time.Month;
 import java.time.Year;
 import java.time.LocalDate;
-import java.time.DayOfWeek;
 import java.time.DateTimeException;
 
-import java.time.temporal.TemporalQuery;
-import java.time.temporal.TemporalAccessor;
-
-import java.io.PrintStream;
-
 public class Superstitious {
-    
+    //runnable
+	//august 13 = true
+	//september 13 = false
     public static void main(String[] args) {
         Month month = null;
         LocalDate date = null;

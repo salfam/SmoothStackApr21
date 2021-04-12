@@ -14,8 +14,10 @@ import java.util.ArrayList;
  */
 public class LambdasAssignment {
 
-	/**
-	 * @param args
+	/**runnable
+	 * 1 tests even/odd
+	 * 2 tests prime/composite
+	 * 3 tests palindrome or nah
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -37,8 +39,8 @@ public class LambdasAssignment {
 		for (int i = 1; i <= fl; i++) {
 			code = Integer.parseInt(res.get(i).substring(0, 1));
 			test = Integer.parseInt(res.get(i).substring(2,res.get(i).length()));
-			System.out.println("code is "+code);
-			System.out.println("test is "+test);
+			//System.out.println("code is "+code);
+			//System.out.println("test is "+test);
 			switch (code) {
 			case 1: {// odd or even
 				if (test % 2 == 1) {

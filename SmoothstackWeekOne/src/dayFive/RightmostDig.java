@@ -9,21 +9,32 @@ package dayFive;
  */
 public class RightmostDig {
 
-	/**
+	/**run it dummy
 	 * @param args
 	 */
-	public static void main(Integer[] args) {
-		//output for rightmost integers
-		Integer[] vals = getRightMost(args);
-		System.out.print("[");
+	public static void main(String[] args) {
+		//convert args to int array
+		Integer[] nums = new Integer[args.length];
+		for(int i=0; i<args.length; i++) {
+			nums[i]=Integer.parseInt(args[i]);
+		}
+		System.out.print("input: [");
+		for(int i : nums) {
+			System.out.print(i+",");
+		}
+		System.out.println("]");
+		
+		//call getRightMost on num array & output
+		Integer[] vals = getRightMost(nums);
+		System.out.print("rightmost values: [");
 		for(int i : vals) {
 			System.out.print(i+",");
 		}
 		System.out.println("]");
 		
-		//output for doubled integers
-		Integer[] morevals = doubleInts(args);
-		System.out.print("[");
+		//call doubleInts on num array & output
+		Integer[] morevals = doubleInts(nums);
+		System.out.print("doubled: [");
 		for(int i : morevals) {
 			System.out.print(i+",");
 		}

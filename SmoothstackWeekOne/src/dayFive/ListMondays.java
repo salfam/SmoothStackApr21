@@ -7,13 +7,7 @@ import java.time.Month;
 import java.time.Year;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.time.DateTimeException;
-
-import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.TemporalAdjusters;
-
-import java.io.PrintStream;
-import java.lang.NumberFormatException;
 
 public class ListMondays {
     public static void main(String[] args) {

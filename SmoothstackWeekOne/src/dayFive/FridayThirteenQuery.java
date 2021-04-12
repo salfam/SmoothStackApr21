@@ -1,15 +1,9 @@
 package dayFive;
 
-import java.time.Month;
-import java.time.Year;
-import java.time.LocalDate;
-import java.time.DateTimeException;
-
 import java.time.temporal.TemporalQuery;
 import java.time.temporal.TemporalAccessor;
 import java.time.temporal.ChronoField;
 
-import java.io.PrintStream;
 import java.lang.Boolean;
 
 public class FridayThirteenQuery implements TemporalQuery<Boolean> {

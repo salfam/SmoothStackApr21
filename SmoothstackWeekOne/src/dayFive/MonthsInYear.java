@@ -8,10 +8,10 @@ import java.time.Year;
 import java.time.YearMonth;
 import java.time.DateTimeException;
 
-import java.io.PrintStream;
 import java.lang.NumberFormatException;
 
 public class MonthsInYear {
+	//runnable
     public static void main(String[] args) {
         int year = 0;
 
@@ -29,7 +29,8 @@ public class MonthsInYear {
         }
 
         try {
-            Year test = Year.of(year);
+            @SuppressWarnings("unused")
+			Year test = Year.of(year);
         } catch (DateTimeException exc) {
             System.out.printf("%d is not a valid year.%n", year);
             throw exc;     // Rethrow the exception.

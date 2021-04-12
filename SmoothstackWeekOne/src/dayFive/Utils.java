@@ -5,7 +5,7 @@ package dayFive;
 
 /**
  * @author Sam Ebe
- *
+ * used by StringLambdas
  */
 public class Utils {
 	static int sortByE(String a, String b) {
