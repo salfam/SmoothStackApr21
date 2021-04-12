@@ -4,6 +4,7 @@
 package dayFive;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
 
@@ -19,7 +20,8 @@ public class LambdasAssignment {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList<String> res = new ArrayList<>();
-		try (BufferedReader br = new BufferedReader(new FileReader("dayFive/input"))) {
+		String filepath = new File("src/dayFive/input.txt").getAbsolutePath();
+		try (BufferedReader br = new BufferedReader(new FileReader(filepath))) {
 			while (br.ready()) {
 				res.add(br.readLine());
 			}
@@ -32,10 +34,11 @@ public class LambdasAssignment {
 		int code = 0;
 		int test = 0;
 
-		for (int i = 0; i < fl; i++) {
+		for (int i = 1; i <= fl; i++) {
 			code = Integer.parseInt(res.get(i).substring(0, 1));
-			test = Integer.parseInt(res.get(i).substring(2));
-
+			test = Integer.parseInt(res.get(i).substring(2,res.get(i).length()));
+			System.out.println("code is "+code);
+			System.out.println("test is "+test);
 			switch (code) {
 			case 1: {// odd or even
 				if (test % 2 == 1) {
@@ -43,14 +46,19 @@ public class LambdasAssignment {
 				} else {
 					System.out.println("EVEN");
 				}
+				break;
 			}
 			case 2: {// prime
 				for (int a = 2; a <= test / 2; a++) {
-					if (test % a == 0) {
+					if (test%a == 0) {
 						System.out.println("COMPOSITE");
+						break;
+					}else if(a==test/2) {
+						System.out.println("PRIME");
+						break;
 					}
 				}
-				System.out.println("PRIME");
+				break;
 			}
 			case 3: {// racecar
 				int num = test;
@@ -63,9 +71,10 @@ public class LambdasAssignment {
 				}
 				if (test == rev) {
 					System.out.println("PALINDROME");
-				} else {
-					System.out.println("NOT PALINDROME");
+					break;
 				}
+				System.out.println("NOT PALINDROME");
+				break;
 			}
 			}
 		}
